@@ -3,6 +3,7 @@ import { IComment, ILike, IPost } from "./post.intestfaces";
 export class Post implements IPost {
 
     constructor() {
+        this.id = "";
         this.title = "";
         this.content = "";
         this.authorID = "";
@@ -11,6 +12,7 @@ export class Post implements IPost {
         this.likes = [];
     }
 
+    id: string;
     title: string;
     content: string;
     authorID: string;

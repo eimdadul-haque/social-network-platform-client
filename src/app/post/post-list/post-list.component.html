@@ -1,1 +1,23 @@
-<p>post-list works!</p>
+<div class="container">
+    <div class="d-flex justify-content-center">
+        <span class="fw-bold h6">Most popular Posts</span>
+    </div>
+</div>
+
+<ng-template [ngIf]="true" [ngIfElse]="noPost">
+    <div class="container mt-5">
+        <div class="row row-cols-sm-1 row-cols-md-3 g-5">
+            <div class="col" *ngFor="let post of posts">
+                <app-post-card> </app-post-card>
+            </div>
+        </div>
+    </div>
+</ng-template>
+
+<ng-template #noPost>
+    <div class="mt-4">
+        <div class="d-flex justify-content-center">
+            <h3 class="text-dark">There are no blogs being discussed...</h3>
+        </div>
+    </div>
+</ng-template>

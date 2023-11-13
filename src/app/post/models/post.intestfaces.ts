@@ -6,6 +6,7 @@ export interface IPost {
     publishedDate: Date;
     comments: IComment[];
     likes: ILike[];
+    id: string;
   }
   
 export interface IComment {
