@@ -1,1 +1,70 @@
-<p>news-feed works!</p>
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-lg-8">
+            <div class="card post">
+                <div class="card-body">
+                    <form>
+                        <div class="mb-3">
+                            <textarea class="form-control" name="postContent"
+                                placeholder="What's on your mind?"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Post</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="card post">
+                <div class="card-body">
+                    <h5 class="card-title">User Name</h5>
+                    <p class="card-text">Posted on: Date and Time</p>
+                    <p class="card-text">This is a sample post. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </p>
+                    <div class="post-options">
+                        <span class="text-info">
+                            <i class="fas fa-thumbs-up"></i>
+                        </span>
+
+                        <span class="ms-2 text-primary">
+                            <i class="fas fa-comment"> </i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-lg-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">User Profile</h5>
+                    <img src="profile-picture.jpg" alt="Profile Picture" class="img-fluid rounded-circle mb-2">
+                    <p class="card-text">Name: User Name</p>
+                    <p class="card-text">Location: City, Country</p>
+                    <p class="card-text">Job: Job Title</p>
+                    <a href="#" class="btn btn-primary btn-sm">Edit Profile</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Friend Requests</h5>
+                    <ul class="list-group">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Friend Request 1
+                            <div>
+                                <button class="btn btn-success btn-sm me-2">Accept</button>
+                                <button class="btn btn-danger btn-sm">Reject</button>
+                            </div>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Friend Request 2
+                            <div>
+                                <button class="btn btn-success btn-sm me-2">Accept</button>
+                                <button class="btn btn-danger btn-sm">Reject</button>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
