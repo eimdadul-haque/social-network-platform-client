@@ -3,19 +3,17 @@ import { IComment, ILike, IPost } from "./post.intestfaces";
 export class Post implements IPost {
 
     constructor() {
-        this.id = "";
-        this.title = "";
-        this.content = "";
-        this.authorID = "";
         this.publishedDate = new Date();
         this.comments = [];
         this.likes = [];
+        this.createdBy = '';
     }
 
-    id: string;
-    title: string;
-    content: string;
-    authorID: string;
+    createdBy: string;
+    id?: string | any = '00000000-0000-0000-0000-000000000000';
+    title: string = '';
+    content: string = '';
+    authorID: string = '';
     publishedDate: Date;
     comments: IComment[];
     likes: ILike[];

@@ -1,12 +1,13 @@
 
 export interface IPost {
-    title: string;
+    title: string | any;
     content: string;
     authorID: string;
     publishedDate: Date;
     comments: IComment[];
     likes: ILike[];
-    id: string;
+    id?: string;
+    createdBy: string;
   }
   
 export interface IComment {
