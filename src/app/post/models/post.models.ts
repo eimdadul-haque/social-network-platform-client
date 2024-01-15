@@ -1,4 +1,4 @@
-import { IComment, ILike, IPost } from "./post.intestfaces";
+import { IComment, ILike, IPost, IPostRequestDto } from "./post.intestfaces";
 
 export class Post implements IPost {
 
@@ -17,4 +17,22 @@ export class Post implements IPost {
     publishedDate: Date;
     comments: IComment[];
     likes: ILike[];
+}
+
+
+export class PostRequest implements IPostRequestDto {
+    
+    constructor() {
+        this.maxCount = 0;
+        this.skipCount = 0;
+        this.page = 0;
+    }
+
+    userId?: string | null | undefined;
+    id?: string | null | undefined;
+    created?: Date | null | undefined;
+    modified?: Date | null | undefined;
+    maxCount: number;
+    skipCount: number;
+    page: number;
 }

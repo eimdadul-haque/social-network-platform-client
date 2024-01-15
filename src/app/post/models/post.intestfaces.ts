@@ -9,6 +9,16 @@ export interface IPost {
     id?: string;
     createdBy: string;
   }
+
+ export interface IPostRequestDto {
+    userId?: string | null;
+    id?: string | null;
+    created?: Date | null;
+    modified?: Date | null;
+    maxCount: number;
+    skipCount: number;
+    page: number;
+}
   
 export interface IComment {
     // Define the properties of your Comment class here
