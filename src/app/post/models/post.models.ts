@@ -26,8 +26,10 @@ export class PostRequest implements IPostRequestDto {
         this.maxCount = 0;
         this.skipCount = 0;
         this.page = 0;
+        this.loadCount = 1;
     }
-
+    
+    loadCount: number;
     userId?: string | null | undefined;
     id?: string | null | undefined;
     created?: Date | null | undefined;

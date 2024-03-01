@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { IPost } from '../models/post.intestfaces';
+import { IPost, IPostRequestDto } from '../models/post.intestfaces';
 import { Invirontment } from 'src/app/Invironment';
 import { PageResultDto } from 'src/app/common/models/PageResultDto';
 
@@ -23,8 +23,8 @@ export class PostService {
     
   }
 
-  getNewsFeedPosts(userId: string): Observable<any> {
-    var apiUrl = this.invirontment.GetNewsFeedPost + userId;
-    return this.httpClient.get<PageResultDto<IPost>>(apiUrl)
+  getNewsFeedPosts(postRequest: IPostRequestDto): Observable<any> {
+    var apiUrl = this.invirontment.GetNewsFeedPost;
+    return this.httpClient.post<PageResultDto<IPost>>(apiUrl, postRequest)
   }
 }

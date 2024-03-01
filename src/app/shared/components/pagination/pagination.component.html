@@ -1,0 +1,26 @@
+<!-- <div class="pagination">
+    <button mat-icon-button (click)="onPageChange(currentPage - 1)" [disabled]="currentPage === 1">
+        Previous
+    </button>
+
+    <span class="page-info">{{ currentPage }} of {{ totalPages }}</span>
+
+    <button mat-icon-button (click)="onPageChange(currentPage + 1)" [disabled]="currentPage === totalPages">
+        Next
+    </button>
+</div> -->
+
+
+<nav aria-label="Page navigation example">
+    <ul class="pagination justify-content-center">
+        <li>
+            <button [disabled]="currentPage === 1" (click)="onPageChange(currentPage - 1)"
+                class="page-link">Previous</button>
+        </li>
+        <li *ngFor="let count of getNumberRange(1, pageCount)" class="page-item"><a class="page-link">{{ count }}</a></li>
+        <li class="page-item">
+            <button [disabled]="currentPage === totalPages" (click)="onPageChange(currentPage + 1)"
+                class="page-link">Next</button>
+        </li>
+    </ul>
+</nav>

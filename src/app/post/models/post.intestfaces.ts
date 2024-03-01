@@ -18,6 +18,7 @@ export interface IPost {
     maxCount: number;
     skipCount: number;
     page: number;
+    loadCount: number;
 }
   
 export interface IComment {

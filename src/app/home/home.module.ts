@@ -7,6 +7,7 @@ import { PostModule } from '../post/post.module';
 import { FormsModule } from '@angular/forms';
 import { PostService } from '../post/services/post.service';
 import { HttpClient } from '@angular/common/http';
+import { SharedModule } from '../shared/shared.module';
 
 
 
@@ -19,7 +20,8 @@ import { HttpClient } from '@angular/common/http';
     CommonModule,
     HomeRoutingModule,
     PostModule,
-    FormsModule
+    FormsModule,
+    SharedModule
   ],
   providers:[
     PostService,

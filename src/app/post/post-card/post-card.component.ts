@@ -16,7 +16,9 @@ export class PostCardComponent {
     this.makeFakePost();
   }
 
-  readMore(id: any): void {}
+  readMore(id: any): void {
+    debugger
+  }
 
   makeFakePost(): void {
     this.post.id = '5caa511d-56a0-41f9-a943-27953870e5ff';

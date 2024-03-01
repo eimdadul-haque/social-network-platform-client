@@ -1,21 +1,16 @@
-<div class="card" style="width: 20rem;">
-    <img *ngIf="!!blogPhotoUrl" class="card-img-top img-fluid" src="{{blogPhotoUrl}}">
+<div class="card mt-4" (click)="readMore(post.id)">
     <div class="card-body">
-        <h4 class="card-title">
-            {{post.title}}
-        </h4>
+        <h5 class="card-title"> {{post.title}}</h5>
 
         <p class="card-text" *ngIf="!!blogPhotoUrl">
             {{post.content.slice(0, 100)}}
         </p>
-        
+
         <p class="card-text" *ngIf="!blogPhotoUrl">
             {{post.content.slice(0, 300)}}
         </p>
 
-        <button class="btn btn-xs bg-primary text-light" (click)="readMore(post.id)">
-            Read More
-        </button>
-
+        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
     </div>
+    <img *ngIf="!!blogPhotoUrl" src="{{blogPhotoUrl}}" class="card-img-bottom" alt="...">
 </div>

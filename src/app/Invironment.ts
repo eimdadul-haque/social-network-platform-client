@@ -23,6 +23,6 @@ export class Invirontment {
         this.CreatePost = this.localBase + '/Post/CreatePost';
 
         //get
-        this.GetNewsFeedPost = this.localBase + '/PostQuery/get-user-posts?userId=';
+        this.GetNewsFeedPost = this.localBase + '/PostQuery/get-user-posts';
     }
 }
